@@ -6,12 +6,10 @@
 }
 
 :root {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
   scrollbar-color: #dfd #ddf;
   scrollbar-width: thin;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 html,
@@ -30,7 +28,7 @@ main {
 }
 
 header {
-  backdrop-filter: blur;
+  backdrop-filter: blur(0.25rem);
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -46,6 +44,10 @@ menu {
   margin: 0;
   padding-inline: 0;
   width: 100%;
+}
+
+menu > li {
+  padding: 1rem;
 }
 
 menu a {
