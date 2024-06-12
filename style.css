@@ -28,10 +28,24 @@ main {
 }
 
 header {
+  top: 0;
+}
+
+header,
+footer {
   backdrop-filter: blur(0.25rem);
   position: fixed;
   width: 100%;
   z-index: 10;
+}
+
+footer {
+  bottom: 0;
+  display: grid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: smaller;
+  padding: 1rem;
+  place-items: center;
 }
 
 menu {
@@ -51,6 +65,7 @@ menu > li {
 }
 
 menu a {
+  color: black;
   text-decoration: none;
 }
 
