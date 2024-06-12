@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: #ddf;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  /* scroll-snap-align: start;
+  scroll-snap-type: proximity; */
+}
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px black, -1px -1px black;
+  font-size: 5rem;
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    animation: color-fade linear forwards;
+    animation-timeline: scroll();
+  }
+
+  h1 {
+    animation: fade-in linear;
+    animation-timeline: view(50% 0%);
+  }
+
+  @keyframes color-fade {
+    to {
+      background-color: #dfd;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
